@@ -41,8 +41,7 @@ jobs:
         run: docker-compose up -d
 
       - name: Run Wait Script
-        run: chmod +x ./wait-for-webserver.sh
-        run: ./wait-for-webserver.sh
+        run: bash wait-for-webserver.sh
 
       - name: Run Selenium Tests
         run: cd selenium && mvn test
